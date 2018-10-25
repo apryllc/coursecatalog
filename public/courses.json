@@ -1,0 +1,63 @@
+[
+{
+  "Course Title": "Cooking 101: Keeping All Your Fingers",
+  "id": 1,
+  "Program": "Basic Skills",
+  "Credit Hours": "2",
+  "Description": "If you struggle to boil water, this class is for you. Learn basic cooking techniques, knife skills, and culinary terminology in a hands on environment. PREREQUISITES: A need to eat food."
+},
+{
+  "Course Title": "Gardening Basics: Grow A Thing",
+  "id": 2,
+  "Program": "Basic Skills",
+  "Credit Hours": "3",
+  "Description": "Looking to still grow while other parts of your life are stagnant? Try Gardening Basics with noted local instructor G. Thumb. In this 8 week course, you'll go from forgetting to water the plant your mother gave you for your anniversary to growing your own carrots. Basic gardening tools provided. PREREQUISITES: None."
+},
+{
+  "Course Title": "Introduction to Javascript: I'm (Really) (Very) Sorry (Just Don't Though)",
+  "id": 3,
+  "Program": "Computer Science",
+  "Credit Hours": "9000",
+  "Description": "It's hard. PREREQUISITES: ??????????????"
+},
+
+{
+  "Course Title": "Adopting a Pet: Dogs are Cool",
+  "id": 4,
+  "Program": "Basic Skills",
+  "Credit Hours": "3",
+  "Description": "Dogs are real cool folks, and in this course we'll teach you the basics of adopting and caring for a new furry friend. Each class consists of a trip to the Humane Society because this course is just a cover for playing with dogs all day. PREREQUISITES: WOOF."
+},
+
+{
+  "Course Title": "Lifelong Learning: Never Too Old (For Real)",
+  "id": 5,
+  "Program": "General Education",
+  "Credit Hours": "1",
+  "Description": "Required for all registered students. Are you a non-traditional, looking to learn something new, or just a bit out of your depth? This course will teach (and reassure) you that you're never too old or too different to learn. We'll go over various learning styles (including finding yours), common roadblocks, and the basic formats of Lifelong Learning's ever changing variety of courses."
+},
+
+{
+  "Course Title": "ESL: Read or Read, Fish or Fishes...",
+  "id": 6,
+  "Program": "Community",
+  "Credit Hours": "3",
+  "Description": "If you're learning English as a Second Language and are looking to connect with other learners, community resources, and events, this course is for you. Led by certified ESL instructor and community liaison, S. Idioms, this course focuses less on grammar lessons and more on small group conversations, outings, and navigating community resources."
+},
+
+{
+"Course Title": "Introduction to Comics, Games, and Other Nerd Things: Fandom for Everyone",
+"id": 7,
+"Program": "Community",
+"Credit Hours": "3",
+"Description": "Do you consider yourself a nerd? Or is your kids' latest obsession with 'SuperBat' (or whoever they are) confusing you? Fandom has grown leaps in bounds in the last decade, and this course will introduce to some broad-ranging favorites, including well known video game franchises, Japanese anime and manga, comics and media for all ages/identities, and how to engage with online communities responsibly and safely."
+},
+
+{
+  "Course Title": "JavaScript Support Group: We Told Ya'll, But Okay, Whatever",
+  "id": 8,
+  "Program": "Community",
+  "Credit Hours": "0",
+  "Description": "A weekly support group that meets for 7 hours on Saturdays for 67 weeks -- still less time than it takes you to learn Javascript. Food, communal crying/wailing, and continuous review of semicolon placement provided. PREREQUISITES: Not learning your lesson the first time, I guess."
+}
+]
