@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Navigation from './Navigation.js';
+import Delete from './DeleteCourse.js';
+import Update from './UpdateCourse.js';
+
 class CourseList extends Component {
   constructor() {
     super()
@@ -30,7 +33,10 @@ render() {
           <li> <b>Program:</b> {course.Program} </li>
           <li><b>Credit Hours: </b>{course['Credit Hours']}</li>
           <li> <b> Description:</b> {course.Description} </li>
+          <Update />
+          <Delete />
         </ul>))}
+
     </div>;
   }
 };
