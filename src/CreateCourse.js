@@ -1,3 +1,5 @@
+//attach a click handler to the button that triggers a POST request to the API?
+
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
@@ -28,7 +30,7 @@ class Create extends Component {
   <Input type="textarea" name="description" id="description" width="50"/>
 </FormGroup>
 
-          <Button>Add to Catalog</Button>
+          <Button className="submit">Add to Catalog</Button>
         </Form>
     );
   }
