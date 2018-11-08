@@ -13,10 +13,12 @@ class CourseList extends Component {
 }
 
 fetchCourses = () => {
-  fetch('https://crudapi.codelouisville.org/users/apryllclark/classes/')
+  fetch('https://crudapi.codelouisville.org/users/apryllclark/classlist/')
     .then(response => response.json())
     .then(data =>
-      this.setState({courses: data.map(c => c.value)}))
+      this.setState({courses:
+        data.filter(course => course.deleted === false)
+        .map(course => course.value)}))
     };
 
 componentDidMount() {
