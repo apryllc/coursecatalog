@@ -4,8 +4,8 @@ import Delete from './DeleteCourse.js';
 import Update from './UpdateCourse.js';
 
 class CourseList extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
   this.state = {
    courses: []
@@ -16,9 +16,9 @@ fetchCourses = () => {
   fetch('https://crudapi.codelouisville.org/users/apryllclark/classlist/')
     .then(response => response.json())
     .then(data =>
-      this.setState({courses:
-        data.filter(course => course.deleted === false)
-        .map(course => course.value)}))
+      this.setState({
+        courses: data.filter(course => course.deleted === false)
+      }));
     };
 
 componentDidMount() {
@@ -31,12 +31,14 @@ render() {
     {this.state.courses
       .map(course =>
         (<ul>
-          <li><b>COURSE TITLE: {course['Course Title']}</b></li>
-          <li> <b>Program:</b> {course.Program} </li>
-          <li><b>Credit Hours: </b>{course['Credit Hours']}</li>
-          <li> <b> Description:</b> {course.Description} </li>
+          <li><b>COURSE TITLE: {course.value['Course Title']}</b></li>
+          <li> <b>Program:</b> {course.value.Program} </li>
+          <li><b>Credit Hours: </b>{course.value['Credit Hours']}</li>
+          <li> <b> Description:</b> {course.value.Description} </li>
           <Update />
-          <Delete />
+          <Delete
+          value={course._id}
+          />
         </ul>))}
 
     </div>;

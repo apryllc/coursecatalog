@@ -14,7 +14,7 @@ class Create extends Component {
       newDescription: ''
    }
   }
-//this captures event changes on the form inputs
+//this captures event changes on the form inputs and sets the state, then those items are included in the post to the API
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value})
   }
@@ -23,8 +23,8 @@ class Create extends Component {
   newClassSubmit = (e) => {
       e.preventDefault();
 
-//initial api call, then on submit takes content of form, turns into JSON object and adds to api JSON
-      fetch('https://crudapi.codelouisville.org/users/apryllclark/classes/', {
+//initial api call, then on submit takes content of form, updates state, turns into JSON object and posts
+      fetch('https://crudapi.codelouisville.org/users/apryllclark/classlist/', {
           method: 'POST',
           headers: {
           'Accept': 'application/json',
@@ -42,17 +42,18 @@ class Create extends Component {
       })
   }
 
-//state is unchangable directly, so the values here needed this.props and not this.state otherwise you can't type in the form
+//props can only be passed down so this is a state change
+//when a user submits, the state is set to the name of input and the value of the input defined in the form
   render() {
     return (
         <Form className="courseform">
         <FormGroup>
-          <Label for="Course Title"><b>Course Title:</b></Label>
-          <Input type="text" name="Course Title" id="Course Title" width="50" value={this.props.newCourseTitle} onChange={(e) => this.handleChange(e)} />
+          <Label for="newCourseTitle"><b>Course Title:</b></Label>
+          <Input type="text" name="newCourseTitle" id="newCourseTitle" value={this.state.newCourseTitle} onChange={(e) => this.handleChange(e)} required/>
         </FormGroup>
         <FormGroup>
-         <Label for="Program"><b>Program</b>:</Label>
-         <Input type="select" name="Program" id="Program" value={this.props.newProgram} onChange={(e) => this.handleChange(e)}>
+         <Label for="newProgram"><b>Program</b>:</Label>
+         <Input type="select" name="newProgram" id="newProgram" value={this.state.newProgram} onChange={(e) => this.handleChange(e)} required>
            <option>Basic Skills</option>
            <option>Community</option>
            <option>Computer Science</option>
@@ -60,17 +61,16 @@ class Create extends Component {
          </Input>
        </FormGroup>
         <FormGroup>
-          <Label for="Credit Hours"><b>Credit Hours</b>:</Label>
-      <Input type="text" name="Credit Hours" id="Credit Hours" width="50" value={this.props.newCreditHours} onChange={(e) => this.handleChange(e)}/>
+          <Label for="newCreditHours"><b>Credit Hours</b>:</Label>
+      <Input type="text" name="newCreditHours" id="newCreditHours" value={this.state.newCreditHours} onChange={(e) => this.handleChange(e)} required />
     </FormGroup>
     <FormGroup>
-      <Label for="Description"><b>Description</b>:</Label>
-  <Input type="text" name="Description" id="Description" width="50" value={this.props.newDescription} onChange={(e) => this.handleChange(e)}/>
+      <Label for="newDescription"><b>Description</b>:</Label>
+  <Input type="text" name="newDescription" id="newDescription" width="50" value={this.state.newDescription} onChange={(e) => this.handleChange(e)} required/>
 </FormGroup>
-
-//this is a click handler for the data in the form
           <Button type="button" onClick={(e) => this.newClassSubmit(e)}>Add to Catalog</Button>
         </Form>
+//this is a click handler for the data in the form
     );
   }
 }
