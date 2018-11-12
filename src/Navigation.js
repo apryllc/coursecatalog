@@ -20,6 +20,9 @@ class Navigation extends Component {
               <NavItem>
                 <NavLink href="/catalog">Full Catalog</NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink href="/studentview">Student View</NavLink>
+              </NavItem>
               </Nav>
         </Navbar>
       </div>
