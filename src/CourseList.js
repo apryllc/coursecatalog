@@ -12,6 +12,7 @@ class CourseList extends Component {
  }
 }
 
+//this fetches the data from the api, formats the response to json, then sets the state by filtered through the resulting array and only including undeleted courses
 fetchCourses = () => {
   fetch('https://crudapi.codelouisville.org/users/apryllclark/classlist/')
     .then(response => response.json())
@@ -21,6 +22,7 @@ fetchCourses = () => {
       }));
     };
 
+//when the component mounts the api call starts
 componentDidMount() {
   this.fetchCourses();
 }
@@ -38,10 +40,11 @@ render() {
           <Update />
           <Delete
           value={course._id}
+          fetchCourses={this.fetchCourses}
           />
         </ul>))}
-
     </div>;
   }
 };
+// renders basic list and also passes properties to the delete button
 export default CourseList;

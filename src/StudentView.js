@@ -4,6 +4,7 @@ import Navigation from './Navigation.js';
 import Enroll from './Enroll.js';
 import Unenroll from './Unenroll.js';
 
+//this is the same as the courselist component 
 class StudentView extends Component {
   constructor(props) {
     super(props)

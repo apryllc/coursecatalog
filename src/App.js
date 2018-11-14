@@ -10,7 +10,7 @@ import {
   Route
 } from 'react-router-dom';
 
-
+//these are the 3 required routes
 class App extends Component {
   render() {
     return (

@@ -33,6 +33,8 @@ class Create extends Component {
           body: JSON.stringify({
               "value":{
 //these correspond to the form input values so that state can be updated and passed to the api
+//the first key pair value needs to match the values in the api objects
+//the second key pair value needs to match the values in the form so those can be updated
                   "Course Title": this.state.newCourseTitle,
                    Program: this.state.newProgram,
                   "Credit Hours": this.state.newCreditHours,
