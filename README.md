@@ -11,15 +11,14 @@ Things I'd like to build in the future include:
 Updated styling\
 Functional buttons\
 Shopping cart for enroll/unenroll\
-A login page for "admins"\
+A login page for "admins"
 
 To run the app:
 
 Clone the repo to your local machine\
 Run npm install for dependencies\
-
-
-Install CORS extension in Chrome for Delete request https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en\
+Install CORS extension in Chrome for Delete request\
+https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en \
 Run npm start
 
 Enjoy~
