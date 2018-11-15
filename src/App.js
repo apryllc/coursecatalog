@@ -16,6 +16,7 @@ class App extends Component {
     return (
       <BrowserRouter>
       <div>
+      <Navigation />
         <Route exact path="/" component={Home} />
         <Route exact path="/catalog" component={CourseList} />
         <Route exact path="/studentview" component={StudentView} />

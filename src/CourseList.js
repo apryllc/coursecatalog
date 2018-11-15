@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navigation from './Navigation.js';
 import Delete from './DeleteCourse.js';
 import Update from './UpdateCourse.js';
 
@@ -29,7 +28,6 @@ componentDidMount() {
 
 render() {
     return <div>
-    <Navigation />
     {this.state.courses
       .map(course =>
         (<ul>

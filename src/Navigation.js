@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Navbar,
   NavbarBrand,
@@ -15,13 +16,13 @@ class Navigation extends Component {
           <NavbarBrand href="/">Lifelong Learning University</NavbarBrand>
             <Nav className="catalognav" navbar>
               <NavItem>
-                <NavLink href="/">Home</NavLink>
+                <NavLink tag={Link} to="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/catalog">Full Catalog</NavLink>
+                <NavLink tag={Link} to="/catalog">Full Catalog</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/studentview">Student View</NavLink>
+                <NavLink tag={Link} to="/studentview">Student View</NavLink>
               </NavItem>
               </Nav>
         </Navbar>
