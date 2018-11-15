@@ -42,6 +42,7 @@ class Create extends Component {
                }
           })
       })
+      .then(alert("Course Added. Please check Full Catalog page."))
   }
 
 //props can only be passed down so this is a state change
